@@ -4,13 +4,18 @@
 #include <fstream>
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include <iostream>
 
-designer::designer(int cameraX, int cameraY, int totalX)
+designer::designer(int settingArray[])
 {
-	this->cameraX = cameraX;
-	this->cameraY = cameraY;
-	this->totalX = totalX;
+	this->cameraX = settingArray[0];
+	this->cameraY = settingArray[1];
+	this->totalX = settingArray[2];
 	k = 0;
+
+	/*std::cout << "Designer X : " << settingArray[0];
+	std::cout << "Designer Y : " << settingArray[1];
+	std::cout << "Designer Total X : " << settingArray[2];*/
 }
 
 void designer::createScreen()
@@ -92,7 +97,7 @@ void designer::ScreenEvent()
 		while (window->pollEvent(eventMain))
 		{
 			if (eventMain.type == sf::Event::Closed) {
-				window->close();
+				exit(0);
 			}
 			if (eventMain.type == sf::Event::MouseButtonPressed && eventMain.mouseButton.button == sf::Mouse::Left) {
 				bool mouseOnSprite;
