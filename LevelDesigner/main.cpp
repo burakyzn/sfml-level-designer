@@ -1,21 +1,14 @@
 #include <iostream>
 #include "designer.h"
-
-
-
+#include "firstSetting.h"
 
 int main() {
+	//Page Setting Class
+	firstSetting *screenSetting = new firstSetting();
+	int* setting = screenSetting->show();
 
-	int cameraX, cameraY, totalX;
-
-	std::cout << "Camera X.......: "; std::cin >> cameraX;
-	std::cout << "Camera Y.......: "; std::cin >> cameraY;
-	std::cout << "Total Screen X.: "; std::cin >> totalX;
-
-
-	designer *desingArea = new designer(cameraX, cameraY, totalX);
+	//Designer Screen Class
+	designer *desingArea = new designer(setting);
 	desingArea->createScreen();
 	desingArea->ScreenEvent();
-
-
 }
