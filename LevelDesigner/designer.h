@@ -21,7 +21,7 @@ class designer
 	bool LControl = false;
 public:
 
-	designer(int cameraX, int cameraY, int totalX);
+	designer(int settingArray[]);
 	void createScreen();
 	void ScreenEvent();
 
