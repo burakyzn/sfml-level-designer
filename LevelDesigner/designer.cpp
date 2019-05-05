@@ -12,10 +12,6 @@ designer::designer(int settingArray[])
 	this->cameraY = settingArray[1];
 	this->totalX = settingArray[2];
 	k = 0;
-
-	/*std::cout << "Designer X : " << settingArray[0];
-	std::cout << "Designer Y : " << settingArray[1];
-	std::cout << "Designer Total X : " << settingArray[2];*/
 }
 
 void designer::createScreen()
